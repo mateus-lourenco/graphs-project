@@ -1,6 +1,8 @@
 package br.unifacisa.si.p3.tests;
 
-import org.junit.Assert;
+
+import static org.junit.Assert.*;
+
 import org.junit.Test;
 
 import br.unifacisa.si.p3.model.Graph;
@@ -25,7 +27,7 @@ public class GraphTest {
 		grafo.addNode("Recife");
 		grafo.addNode("Maceio");
 		
-		Assert.assertEquals(grafo.getNodes().size(), 4);
+		assertEquals(grafo.getNodes().size(), 4);
 	}
 	
 	/**
@@ -43,23 +45,43 @@ public class GraphTest {
 		grafo.addEdge(grafo.addNode("Recife"), grafo.addNode("Maceio"), 0);
 		
 		
-		Assert.assertEquals(grafo.getEdges().size(), 3);
+		assertEquals(grafo.getEdges().size(), 3);
 	}
 	
 	/**
 	 * @author Andrews
 	 * 
-	 * Teste de inserção da aresta com tamanho.
+	 * Teste de inserção da aresta com distância.
 	 * 
 	 */
 	
 	@Test
 	public void testDeInsercaoAresta02() {
 		
-		grafo.addEdge(grafo.addNode("Massa né"), grafo.addNode("Biderecionada"), 2.0);
+		grafo.addEdge(grafo.addNode("Maracajaú"), grafo.addNode("Olinda"), 200);
+		grafo.addEdge(grafo.addNode("Pocinhos"), grafo.addNode("Caturité"), 100);
+		grafo.addEdge(grafo.addNode("São Luis MA"), grafo.addNode("Pouso Alegre"), 500);
 		
+		assertEquals(grafo.getEdgeDistance(1), 200);
 		
+	}
+	
+	
+	/**
+	 * @author Andrews
+	 * 
+	 * Teste de inserção da aresta com distância.
+	 * 
+	 */
+	
+	@Test
+	public void testDeInsercaoArestaIndex() {
 		
+		grafo.addEdge(grafo.addNode("Maracajaú"), grafo.addNode("Olinda"), 200);
+		grafo.addEdge(grafo.addNode("Pocinhos"), grafo.addNode("Caturité"), 100);
+		grafo.addEdge(grafo.addNode("São Luis MA"), grafo.addNode("Pouso Alegre"), 500);
+		
+		assertEquals(grafo.getNodeIndex(1), "Maracajaú");
 		
 	}
 	
