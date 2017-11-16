@@ -1,4 +1,4 @@
-package br.unifacisa.si.p3.graph;
+package br.unifacisa.si.p3.model;
 
 import java.util.List;
 
