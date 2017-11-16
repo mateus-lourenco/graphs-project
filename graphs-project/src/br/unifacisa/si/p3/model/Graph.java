@@ -49,8 +49,8 @@ public class Graph {
 	 * @param end
 	 * @return value inserted
 	 */
-	public Edge addEdge(Node start, Node end) {
-		Edge edge = new Edge(start, end);
+	public Edge addEdge(Node start, Node end, double distance) {
+		Edge edge = new Edge(start, end, distance);
 		start.addEdge(edge);
 		edges.add(edge);
 		return edge;
