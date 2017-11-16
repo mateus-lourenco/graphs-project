@@ -1,4 +1,4 @@
-package br.unifacisa.si.p3.model;
+ package br.unifacisa.si.p3.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,6 +10,22 @@ import java.util.List;
 public class Graph {
 	List<Node> nodes;
 	List<Edge> edges;
+
+	public void setNodes(List<Node> nodes) {
+		this.nodes = nodes;
+	}
+
+	public void setEdges(List<Edge> edges) {
+		this.edges = edges;
+	}
+
+	public List<Node> getNodes() {
+		return nodes;
+	}
+
+	public List<Edge> getEdges() {
+		return edges;
+	}
 
 	public Graph() {
 		this.nodes = new ArrayList<Node>();
