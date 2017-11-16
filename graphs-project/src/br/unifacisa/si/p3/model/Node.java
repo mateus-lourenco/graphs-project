@@ -1,5 +1,6 @@
 package br.unifacisa.si.p3.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -9,29 +10,22 @@ import java.util.List;
  */
 public class Node {
 	String name;
-	List<Edge> connections;
+	List<Edge> connection;
+
 	/**
-	 * @return the name
+	 * 
+	 * @param name
 	 */
-	public String getName() {
-		return name;
-	}
-	/**
-	 * @param name the name to set
-	 */
-	public void setName(String name) {
+	public Node(String name) {
 		this.name = name;
+		this.connection = new ArrayList<Edge>();
 	}
+
 	/**
-	 * @return the connections
+	 * 
+	 * @param edge
 	 */
-	public List<Edge> getConnections() {
-		return connections;
-	}
-	/**
-	 * @param connections the connections to set
-	 */
-	public void setConnections(List<Edge> connections) {
-		this.connections = connections;
+	public void addEdge(Edge edge) {
+		connection.add(edge);
 	}
 }
