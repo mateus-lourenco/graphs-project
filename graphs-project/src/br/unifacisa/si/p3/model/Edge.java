@@ -15,6 +15,7 @@ public class Edge {
 	 * 
 	 * @param start
 	 * @param end
+	 * @param distance
 	 */
 	public Edge(Node start, Node end, double distance) {
 		this.start = start;
@@ -22,7 +23,13 @@ public class Edge {
 		this.distance =  distance;
 	}
 	
+	
+	
 	public double getDistance() {
 		return distance;
 	}
+
+
+
+	
 }

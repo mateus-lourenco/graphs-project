@@ -62,7 +62,7 @@ public class GraphTest {
 		grafo.addEdge(grafo.addNode("Pocinhos"), grafo.addNode("Caturité"), 100);
 		grafo.addEdge(grafo.addNode("São Luis MA"), grafo.addNode("Pouso Alegre"), 500);
 		
-		assertEquals(grafo.getEdgeDistance(1), 200);
+		assertEquals(grafo.getEdgeDistance(0), 200, 0);
 		
 	}
 	
@@ -81,7 +81,7 @@ public class GraphTest {
 		grafo.addEdge(grafo.addNode("Pocinhos"), grafo.addNode("Caturité"), 100);
 		grafo.addEdge(grafo.addNode("São Luis MA"), grafo.addNode("Pouso Alegre"), 500);
 		
-		assertEquals(grafo.getNodeIndex(1), "Maracajaú");
+		assertEquals(grafo.getNodeIndex(0), "Maracajaú");
 		
 	}
 	
