@@ -38,12 +38,32 @@ public class GraphTest {
 	@Test
 	public void testDeInsercaoAresta() {
 		
-		grafo.addEdge(grafo.addNode("Campina Grande"), grafo.addNode("João Pessoa"));
-		grafo.addEdge(grafo.addNode("Joao Pessoa"), grafo.addNode("Recife"));
-		grafo.addEdge(grafo.addNode("Recife"), grafo.addNode("Maceio"));
+		grafo.addEdge(grafo.addNode("Campina Grande"), grafo.addNode("João Pessoa"), 0);
+		grafo.addEdge(grafo.addNode("Joao Pessoa"), grafo.addNode("Recife"), 0);
+		grafo.addEdge(grafo.addNode("Recife"), grafo.addNode("Maceio"), 0);
 		
 		
 		Assert.assertEquals(grafo.getEdges().size(), 3);
 	}
+	
+	/**
+	 * @author Andrews
+	 * 
+	 * Teste de inserção da aresta com tamanho.
+	 * 
+	 */
+	
+	@Test
+	public void testDeInsercaoAresta02() {
+		
+		grafo.addEdge(grafo.addNode("Massa né"), grafo.addNode("Biderecionada"), 2.0);
+		
+		
+		
+		
+	}
+	
+	
+	
 
 }

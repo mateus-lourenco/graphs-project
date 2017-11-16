@@ -9,7 +9,7 @@ import java.util.List;
  *
  */
 public class Node {
-	String name;
+	private String name;
 	List<Edge> connection;
 
 	/**
@@ -27,5 +27,12 @@ public class Node {
 	 */
 	public void addEdge(Edge edge) {
 		connection.add(edge);
+	}
+	
+	/**
+	 * @return
+	 */
+	public String getName() {
+		return name;
 	}
 }

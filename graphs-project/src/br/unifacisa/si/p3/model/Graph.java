@@ -26,6 +26,14 @@ public class Graph {
 	public List<Edge> getEdges() {
 		return edges;
 	}
+	
+	public double getEdgeDistance(int index) {
+		return edges.get(index).getDistance();
+	}
+	
+	public String getNodeIndex(int index) {
+		return nodes.get(index).getName();
+	}
 
 	public Graph() {
 		this.nodes = new ArrayList<Node>();
@@ -49,10 +57,9 @@ public class Graph {
 	 * @param end
 	 * @return value inserted
 	 */
-	public Edge addEdge(Node start, Node end, double distance) {
+	public void addEdge(Node start, Node end, double distance) {
 		Edge edge = new Edge(start, end, distance);
 		start.addEdge(edge);
 		edges.add(edge);
-		return edge;
 	}
 }
