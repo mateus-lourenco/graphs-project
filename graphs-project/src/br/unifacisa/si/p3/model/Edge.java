@@ -11,6 +11,7 @@ public class Edge {
 	double distance;
 	Node start;
 	Node end;
+	
 	/**
 	 * 
 	 * @param start

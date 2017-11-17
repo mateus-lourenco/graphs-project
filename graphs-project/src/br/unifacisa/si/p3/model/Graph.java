@@ -1,4 +1,4 @@
- package br.unifacisa.si.p3.model;
+package br.unifacisa.si.p3.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,33 +11,59 @@ public class Graph {
 	List<Node> nodes;
 	List<Edge> edges;
 
+	public Graph() {
+		this.nodes = new ArrayList<Node>();
+		this.edges = new ArrayList<Edge>();
+	}
+
+	/**
+	 * @author Andrews
+	 * @param nodes
+	 */
 	public void setNodes(List<Node> nodes) {
 		this.nodes = nodes;
 	}
 
+	/**
+	 * @author Andrews
+	 * @param edges
+	 */
 	public void setEdges(List<Edge> edges) {
 		this.edges = edges;
 	}
 
+	/**
+	 * @author Andrews
+	 * @return nodes
+	 */
 	public List<Node> getNodes() {
 		return nodes;
 	}
 
+	/**
+	 * @author Andrews
+	 * @return edges
+	 */
 	public List<Edge> getEdges() {
 		return edges;
 	}
-	
+
+	/**
+	 * @author Andrews
+	 * @param index
+	 * @return distance
+	 */
 	public double getEdgeDistance(int index) {
 		return edges.get(index).getDistance();
 	}
-	
+
+	/**
+	 * @author Andrews
+	 * @param index
+	 * @return name
+	 */
 	public String getNodeIndex(int index) {
 		return nodes.get(index).getName();
-	}
-
-	public Graph() {
-		this.nodes = new ArrayList<Node>();
-		this.edges = new ArrayList<Edge>();
 	}
 
 	/**
