@@ -27,7 +27,7 @@ public class GraphTest {
 		graph.addNode("Recife");
 		graph.addNode("Maceio");
 		
-		assertEquals(graph.getNodes().size(), 4);
+		assertEquals(graph.getVertexes().size(), 4);
 	}
 	
 	/**
@@ -81,7 +81,7 @@ public class GraphTest {
 		graph.addEdge(graph.addNode("Pocinhos"), graph.addNode("Caturité"), 100);
 		graph.addEdge(graph.addNode("São Luis MA"), graph.addNode("Pouso Alegre"), 500);
 		
-		assertEquals(graph.getNodeIndex(0), "Maracajaú");
+		assertEquals(graph.getVertexByIndex(0), "Maracajaú");
 		
 	}
 	

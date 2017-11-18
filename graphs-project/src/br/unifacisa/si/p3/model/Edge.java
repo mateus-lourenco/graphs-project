@@ -9,8 +9,8 @@ public class Edge {
 	
 	
 	double distance;
-	Node start;
-	Node end;
+	Vertex start;
+	Vertex end;
 	
 	/**
 	 * 
@@ -18,12 +18,11 @@ public class Edge {
 	 * @param end
 	 * @param distance
 	 */
-	public Edge(Node start, Node end, double distance) {
+	public Edge(Vertex start, Vertex end, double distance) {
 		this.start = start;
 		this.end = end;
 		this.distance =  distance;
 	}
-	
 	
 	
 	public double getDistance() {

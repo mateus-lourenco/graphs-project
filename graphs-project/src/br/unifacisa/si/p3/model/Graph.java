@@ -8,20 +8,20 @@ import java.util.List;
  *
  */
 public class Graph {
-	List<Node> nodes;
+	List<Vertex> vertexes;
 	List<Edge> edges;
 
 	public Graph() {
-		this.nodes = new ArrayList<Node>();
+		this.vertexes = new ArrayList<Vertex>();
 		this.edges = new ArrayList<Edge>();
 	}
 
 	/**
 	 * @author Andrews
-	 * @param nodes
+	 * @param vertexes
 	 */
-	public void setNodes(List<Node> nodes) {
-		this.nodes = nodes;
+	public void setVetex(List<Vertex> vertexes) {
+		this.vertexes = vertexes;
 	}
 
 	/**
@@ -34,10 +34,10 @@ public class Graph {
 
 	/**
 	 * @author Andrews
-	 * @return nodes
+	 * @return vertexes
 	 */
-	public List<Node> getNodes() {
-		return nodes;
+	public List<Vertex> getVertexes() {
+		return vertexes;
 	}
 
 	/**
@@ -62,8 +62,17 @@ public class Graph {
 	 * @param index
 	 * @return name
 	 */
-	public String getNodeIndex(int index) {
-		return nodes.get(index).getName();
+	public String getVertexNameIndex(int index) {
+		return vertexes.get(index).getName();
+	}
+
+	/**
+	 * @author Mateus Lourenco
+	 * @param index
+	 * @return vertex by index
+	 */
+	public Vertex getVertexByIndex(int index) {
+		return vertexes.get(index);
 	}
 
 	/**
@@ -71,10 +80,10 @@ public class Graph {
 	 * @param name
 	 * @return value inserted
 	 */
-	public Node addNode(String name) {
-		Node n = new Node(name);
-		nodes.add(n);
-		return n;
+	public Vertex addNode(String name) {
+		Vertex v = new Vertex(name);
+		vertexes.add(v);
+		return v;
 	}
 
 	/**
@@ -83,7 +92,7 @@ public class Graph {
 	 * @param end
 	 * @return value inserted
 	 */
-	public void addEdge(Node start, Node end, double distance) {
+	public void addEdge(Vertex start, Vertex end, double distance) {
 		Edge edge = new Edge(start, end, distance);
 		start.addEdge(edge);
 		edges.add(edge);
