@@ -1,6 +1,6 @@
 package br.unifacisa.si.p3.model;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -10,30 +10,7 @@ import java.util.List;
  */
 public class Vertex {
 	private String name;
-	List<Edge> edges;
-
-	/**
-	 * @return the edges
-	 */
-	public Edge getConnection(int index) {
-		return edges.get(index);
-	}
-
-	/**
-	 * @param name
-	 *            the name to set
-	 */
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	/**
-	 * @param edges
-	 *            the edges to set
-	 */
-	public void setEdges(List<Edge> connection) {
-		this.edges = connection;
-	}
+	List<Edge> connections;
 
 	/**
 	 * 
@@ -41,15 +18,7 @@ public class Vertex {
 	 */
 	public Vertex(String name) {
 		this.name = name;
-		this.edges = new ArrayList<Edge>();
-	}
-
-	/**
-	 * 
-	 * @param edge
-	 */
-	public void addEdge(Edge edge) {
-		edges.add(edge);
+		this.connections = new LinkedList<Edge>();
 	}
 
 	/**
@@ -57,6 +26,21 @@ public class Vertex {
 	 */
 	public String getName() {
 		return name;
+	}
+
+	/**
+	 * 
+	 * @param edge
+	 */
+	public void addConnection(Edge edge) {
+		connections.add(edge);
+	}
+
+	/**
+	 * @return the connections
+	 */
+	public Edge getConnectionByIndex(int index) {
+		return connections.get(index);
 	}
 
 }

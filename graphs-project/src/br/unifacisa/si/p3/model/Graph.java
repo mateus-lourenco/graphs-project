@@ -1,6 +1,6 @@
 package br.unifacisa.si.p3.model;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -12,24 +12,8 @@ public class Graph {
 	List<Edge> edges;
 
 	public Graph() {
-		this.vertexes = new ArrayList<Vertex>();
-		this.edges = new ArrayList<Edge>();
-	}
-
-	/**
-	 * @author Andrews
-	 * @param vertexes
-	 */
-	public void setVetex(List<Vertex> vertexes) {
-		this.vertexes = vertexes;
-	}
-
-	/**
-	 * @author Andrews
-	 * @param edges
-	 */
-	public void setEdges(List<Edge> edges) {
-		this.edges = edges;
+		this.vertexes = new LinkedList<Vertex>();
+		this.edges = new LinkedList<Edge>();
 	}
 
 	/**
@@ -42,7 +26,7 @@ public class Graph {
 
 	/**
 	 * @author Andrews
-	 * @return edges
+	 * @return connections
 	 */
 	public List<Edge> getEdges() {
 		return edges;
@@ -62,12 +46,12 @@ public class Graph {
 	 * @param index
 	 * @return name
 	 */
-	public String getVertexNameIndex(int index) {
+	public String getVertexNameByIndex(int index) {
 		return vertexes.get(index).getName();
 	}
 
 	/**
-	 * @author Mateus Lourenco
+	 * 
 	 * @param index
 	 * @return vertex by index
 	 */
@@ -77,10 +61,18 @@ public class Graph {
 
 	/**
 	 * 
+	 * @param index
+	 * @return edge by index
+	 */
+	public Edge getEdgeByIndex(int index) {
+		return edges.get(index);
+	}
+	/**
+	 * 
 	 * @param name
 	 * @return value inserted
 	 */
-	public Vertex addNode(String name) {
+	public Vertex addVertex(String name) {
 		Vertex v = new Vertex(name);
 		vertexes.add(v);
 		return v;
@@ -94,7 +86,7 @@ public class Graph {
 	 */
 	public void addEdge(Vertex start, Vertex end, double distance) {
 		Edge edge = new Edge(start, end, distance);
-		start.addEdge(edge);
+		start.addConnection(edge);
 		edges.add(edge);
 	}
 }
